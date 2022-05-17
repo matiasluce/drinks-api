@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tragos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="title">Nuestros tragos</h1>
+    </header>
+    <div id="app">
+        <div class="card" v-for="trago in datos">
+            <p class="name">{{trago.strDrink}}</p>
+            <img :src="trago.strDrinkThumb" :alt="trago.strDrink">
+            <p class="alc" :class="trago.strAlcoholic">{{trago.strAlcoholic}}</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
